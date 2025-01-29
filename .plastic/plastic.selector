@@ -1,0 +1,4 @@
+repository "VR Bones@azumis_code@cloud"
+  path "/"
+    br "/main"
+    co "/main"

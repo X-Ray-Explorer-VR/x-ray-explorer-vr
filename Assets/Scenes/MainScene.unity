@@ -1162,7 +1162,7 @@ GameObject:
   - component: {fileID: 1760563340}
   - component: {fileID: 1760563339}
   m_Layer: 0
-  m_Name: Analysis table
+  m_Name: Analysis Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

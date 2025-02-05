@@ -747,6 +747,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactable Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 8280190175540544989, guid: 4e86649bb17adc4408923004990429ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1182,6 +1186,63 @@ Transform:
   - {fileID: 994957363}
   m_Father: {fileID: 1760563338}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &916259835910596412
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7778717852793476521, guid: 23cfd6aab07e2714eb93046bc199b37e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3395
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778717852793476521, guid: 23cfd6aab07e2714eb93046bc199b37e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.182
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778717852793476521, guid: 23cfd6aab07e2714eb93046bc199b37e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.349
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778717852793476521, guid: 23cfd6aab07e2714eb93046bc199b37e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778717852793476521, guid: 23cfd6aab07e2714eb93046bc199b37e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778717852793476521, guid: 23cfd6aab07e2714eb93046bc199b37e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778717852793476521, guid: 23cfd6aab07e2714eb93046bc199b37e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778717852793476521, guid: 23cfd6aab07e2714eb93046bc199b37e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778717852793476521, guid: 23cfd6aab07e2714eb93046bc199b37e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778717852793476521, guid: 23cfd6aab07e2714eb93046bc199b37e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793815121313531037, guid: 23cfd6aab07e2714eb93046bc199b37e, type: 3}
+      propertyPath: m_Name
+      value: Femur (Bone)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 23cfd6aab07e2714eb93046bc199b37e, type: 3}
 --- !u!23 &1185894851611611535
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1632,3 +1693,4 @@ SceneRoots:
   - {fileID: 748699633}
   - {fileID: 285212000}
   - {fileID: 1177187274}
+  - {fileID: 916259835910596412}

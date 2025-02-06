@@ -1211,6 +1211,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d16ac7126e4d8b24abdf4f457a2d502c, type: 3}
+--- !u!82 &1209326650 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6405919113808873367, guid: d16ac7126e4d8b24abdf4f457a2d502c, type: 3}
+  m_PrefabInstance: {fileID: 1209326649}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1245655443
 GameObject:
   m_ObjectHideFlags: 0
@@ -1651,17 +1656,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760563337}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1836572440 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 150079435429119835, guid: d16ac7126e4d8b24abdf4f457a2d502c, type: 3}
-  m_PrefabInstance: {fileID: 1209326649}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f2a880c609b0694991bbaa96b670ae0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1842093339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1980,7 +1974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 129352539112450381, guid: a494f1586cce6054d98682a8edf6801e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40.795
       objectReference: {fileID: 0}
     - target: {fileID: 129352539112450381, guid: a494f1586cce6054d98682a8edf6801e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2016,7 +2010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1204076619688997246, guid: a494f1586cce6054d98682a8edf6801e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40.795
       objectReference: {fileID: 0}
     - target: {fileID: 1204076619688997246, guid: a494f1586cce6054d98682a8edf6801e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2036,7 +2030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1499465069518479693, guid: a494f1586cce6054d98682a8edf6801e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 67.535
       objectReference: {fileID: 0}
     - target: {fileID: 1499465069518479693, guid: a494f1586cce6054d98682a8edf6801e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2060,7 +2054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3156386880415435313, guid: a494f1586cce6054d98682a8edf6801e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3156386880415435313, guid: a494f1586cce6054d98682a8edf6801e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2088,7 +2082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3788801475134356187, guid: a494f1586cce6054d98682a8edf6801e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 55.865
       objectReference: {fileID: 0}
     - target: {fileID: 3788801475134356187, guid: a494f1586cce6054d98682a8edf6801e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2164,7 +2158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4937141625598259527, guid: a494f1586cce6054d98682a8edf6801e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 55.865
       objectReference: {fileID: 0}
     - target: {fileID: 4937141625598259527, guid: a494f1586cce6054d98682a8edf6801e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2200,7 +2194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7252150026353704048, guid: a494f1586cce6054d98682a8edf6801e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7252150026353704048, guid: a494f1586cce6054d98682a8edf6801e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2287,9 +2281,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1836572440}
-        m_TargetAssemblyTypeName: PlaySFX, Assembly-CSharp
-        m_MethodName: PlaySocketSound
+      - m_Target: {fileID: 1209326650}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

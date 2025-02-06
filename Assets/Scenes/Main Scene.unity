@@ -9,7 +9,7 @@ OcclusionCullingSettings:
     smallestHole: 0.25
     backfaceThreshold: 100
   m_SceneGUID: 2414428c5489abb429c41952a36047f1
-  m_OcclusionCullingData: {fileID: 36300000, guid: 472207824d27d5d43bbb9ae547154ccf, type: 2}
+  m_OcclusionCullingData: {fileID: 36300000, guid: 2a6362523a5d7a44ea079e381933c8a6, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 0fb060d4194278c4f8e89fe4d5766b56, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: d8d9e992e31d88d4e821e2d44c2c3cb4, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 78151f5e58fb9f749bd5225f789faa27, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -1232,7 +1232,7 @@ GameObject:
   - component: {fileID: 1245655446}
   - component: {fileID: 1245655451}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Analyzer Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

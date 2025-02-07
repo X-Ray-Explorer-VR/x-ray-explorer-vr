@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DisableGameObject : MonoBehaviour
+public class DisableSelf : MonoBehaviour
 {
     public void Disable()
     {

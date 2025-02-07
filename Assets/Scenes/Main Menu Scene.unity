@@ -362,7 +362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1922835718797634344, guid: a494f1586cce6054d98682a8edf6801e, type: 3}
       propertyPath: m_Name
-      value: Complete XR Origin Set Up Variant
+      value: XR Origin Set Up (Custom)
       objectReference: {fileID: 0}
     - target: {fileID: 3156386880415435313, guid: a494f1586cce6054d98682a8edf6801e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2073,7 +2073,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1363620245546617077}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -3467,10 +3467,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio
       objectReference: {fileID: 0}
-    - target: {fileID: 2694980659710870369, guid: d16ac7126e4d8b24abdf4f457a2d502c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5177725677050338293, guid: d16ac7126e4d8b24abdf4f457a2d502c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3516,16 +3512,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d16ac7126e4d8b24abdf4f457a2d502c, type: 3}
---- !u!82 &1363620245546617077 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2234398647924057129, guid: d16ac7126e4d8b24abdf4f457a2d502c, type: 3}
-  m_PrefabInstance: {fileID: 1363620245546617076}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 344945041}
   - {fileID: 748699633}
-  - {fileID: 1363620245546617076}
   - {fileID: 1369572734}
+  - {fileID: 1363620245546617076}

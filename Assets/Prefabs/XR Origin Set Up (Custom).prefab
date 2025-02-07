@@ -3227,7 +3227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4021307373189744467}
   m_Layer: 0
-  m_Name: Complete XR Origin Set Up Variant
+  m_Name: XR Origin Set Up (Custom)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,4 +1,5 @@
 using System;
+using System.Xml;
 using TMPro;
 using Unity.Tutorials.Core.Editor;
 using UnityEngine;
@@ -12,6 +13,15 @@ public class SetBoneInformation : MonoBehaviour
     public TextMeshProUGUI descriptionText;
     public XRSocketInteractor socket;
 
+    private XmlDocument boneData;
+
+    private void Start()
+    {
+        boneData = new XmlDocument();
+        boneData.PreserveWhitespace = false;
+        boneData.Load("Assets/Data/bone-data.xml");
+    }
+
     public void UpdateInformation()
     {
         GameObject objectInSocket = socket.GetOldestInteractableSelected().transform.gameObject;
@@ -19,7 +29,6 @@ public class SetBoneInformation : MonoBehaviour
         try
         {
             string boneCode = objectInSocket.GetComponent<BoneCode>().code;
-            Debug.Log(boneCode);
 
             if (boneCode.IsNotNullOrEmpty())
             {
@@ -34,20 +43,15 @@ public class SetBoneInformation : MonoBehaviour
 
     private void SetInformation(string boneCode)
     {
-        switch (boneCode)
-        {
-            case "skull":
-                nameText.text = "Cráneo";
-                scientificNameText.text = "cranium";
-                descriptionText.text = "El cráneo proporciona un medio de proteción al encéfalo y a órganos sensoriales especiales (vista, olfato, equilibrio y gusto).\n\nEste se compone de 8 huesos diferentes como el hueso frontal, maxilar superior, temporal izquierdo y derecho, pariental izquierdo y derecho, occipital, cigomático izquierdo y derecho, esfenoides y la mandíbula.";
-                break;
-            case "left-femur":
-            default:
-                nameText.text = "Fémur izquierdo";
-                scientificNameText.text = "os femuris";
-                descriptionText.text = "El fémur es el hueso más largo y fuerte del cuerpo y soporta el peso corporal al ponerse de pie, caminar y saltar.\n\nEn la rodilla, el fémur y la tibia se transladan uno sobre otro como una bisagra, lo que provoca la flexión y al extensión.";
-                break;
+        XmlNode node = boneData.DocumentElement.SelectSingleNode(boneCode);
 
-        }
+
+
+        // Get data from node attributes
+        nameText.text = node.Attributes["name"].InnerText;
+        scientificNameText.text = node.Attributes["scientific-name"].InnerText;
+        descriptionText.text = node.Attributes["description"].InnerText.Replace("\\n", "\n");
+
+        Debug.Log(descriptionText.text);
     }
 }

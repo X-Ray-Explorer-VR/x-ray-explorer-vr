@@ -1,7 +1,6 @@
 using System;
 using System.Xml;
 using TMPro;
-using Unity.Tutorials.Core.Editor;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -30,7 +29,7 @@ public class SetBoneInformation : MonoBehaviour
         {
             string boneCode = objectInSocket.GetComponent<BoneCode>().code;
 
-            if (boneCode.IsNotNullOrEmpty())
+            if (string.IsNullOrEmpty(boneCode))
             {
                 SetInformation(boneCode);
             }

@@ -16,9 +16,13 @@ public class SetBoneInformation : MonoBehaviour
 
     private void Start()
     {
+        TextAsset textAsset = (TextAsset)Resources.Load("Bone Data");
+
+        Debug.Log(textAsset);
+
         boneData = new XmlDocument();
         boneData.PreserveWhitespace = false;
-        boneData.Load("Assets/Data/bone-data.xml");
+        boneData.LoadXml(textAsset.text);
     }
 
     public void UpdateInformation()
@@ -28,6 +32,9 @@ public class SetBoneInformation : MonoBehaviour
         try
         {
             string boneCode = objectInSocket.GetComponent<BoneCode>().code;
+
+            Debug.Log(boneCode);
+            Debug.Log(!string.IsNullOrEmpty(boneCode));
 
             if (!string.IsNullOrEmpty(boneCode))
             {

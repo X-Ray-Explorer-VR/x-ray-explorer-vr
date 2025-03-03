@@ -45,8 +45,6 @@ public class SetBoneInformation : MonoBehaviour
     {
         XmlNode node = boneData.DocumentElement.SelectSingleNode(boneCode);
 
-
-
         // Get data from node attributes
         nameText.text = node.Attributes["name"].InnerText;
         scientificNameText.text = node.Attributes["scientific-name"].InnerText;

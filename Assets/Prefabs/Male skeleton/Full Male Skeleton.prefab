@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2546165423969697
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7471178416345227882}
+  m_Layer: 0
+  m_Name: Attach point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7471178416345227882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546165423969697}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.1305259, y: -0.00000011175871, z: -0.99144495, w: -0.00000047311187}
+  m_LocalPosition: {x: 0.00000008583753, y: 0.00000035757728, z: -0.00000005956938}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4206352011177894747}
+  m_LocalEulerAnglesHint: {x: 0, y: 15, z: -180}
 --- !u!1 &171149350636526930
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +522,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.546, z: -0.011}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7471178416345227882}
   m_Father: {fileID: 1007403654651800223}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1004352519004826878
@@ -694,7 +726,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 7471178416345227882}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
@@ -719,7 +751,7 @@ MonoBehaviour:
   m_SmoothScale: 0
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
-  m_ThrowOnDetach: 1
+  m_ThrowOnDetach: 0
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
     serializedVersion: 2
@@ -781,13 +813,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4378179419887788231}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.158, z: -0}
+  m_LocalRotation: {x: -0.000000029802319, y: 0.707107, z: 0.00000008940696, w: 0.70710665}
+  m_LocalPosition: {x: -6.9322326e-10, y: -0.15800044, z: -0.000000055879354}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4700526405765381221}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &4604378588287251904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,7 +1141,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 1650472176062757567}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
@@ -1134,7 +1166,7 @@ MonoBehaviour:
   m_SmoothScale: 0
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
-  m_ThrowOnDetach: 1
+  m_ThrowOnDetach: 0
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
     serializedVersion: 2
@@ -1435,7 +1467,7 @@ MonoBehaviour:
   m_SmoothScale: 0
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
-  m_ThrowOnDetach: 1
+  m_ThrowOnDetach: 0
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
     serializedVersion: 2
@@ -1580,13 +1612,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7427579454249145296}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.93106806, y: -0.0000000018626451, z: -0.000000014901161, w: 0.36484572}
-  m_LocalPosition: {x: 0.063, y: -0.012, z: -1.037}
+  m_LocalRotation: {x: -0.0000002225861, y: -0.36484578, z: -0.931068, w: -0.000000057742}
+  m_LocalPosition: {x: 0.06299997, y: -0.012000427, z: -1.0369995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3403144457025111344}
-  m_LocalEulerAnglesHint: {x: 137.204, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 222.796, y: 180, z: 0}
 --- !u!1 &8393262430995242581
 GameObject:
   m_ObjectHideFlags: 0

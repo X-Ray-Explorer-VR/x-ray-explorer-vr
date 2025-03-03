@@ -29,7 +29,7 @@ public class SetBoneInformation : MonoBehaviour
         {
             string boneCode = objectInSocket.GetComponent<BoneCode>().code;
 
-            if (string.IsNullOrEmpty(boneCode))
+            if (!string.IsNullOrEmpty(boneCode))
             {
                 SetInformation(boneCode);
             }

@@ -5,9 +5,9 @@
     scientific-name="cranium"
     description="El cráneo proporciona un medio de proteción al encéfalo y a órganos sensoriales especiales (vista, olfato, equilibrio y gusto).\n\nEste se compone de 8 huesos diferentes como el hueso frontal, maxilar superior, temporal izquierdo y derecho, pariental izquierdo y derecho, occipital, cigomático izquierdo y derecho, esfenoides y la mandíbula."
   />
-  <left-femur
-    name="Fémur izquierdo"
+  <spinal-cord
+    name="Columna vertebral"
     scientific-name="os femuris"
-    description="El fémur es el hueso más largo y fuerte del cuerpo y soporta el peso corporal al ponerse de pie, caminar y saltar.\n\nEn la rodilla, el fémur y la tibia se transladan uno sobre otro como una bisagra, lo que provoca la flexión y al extensión."
+    description="La columna vertebral está compuesta por 33 huesos diferentes y dividida en varias secciones.\n\nLas vértebras cervicales forman el cuello.\nLas vértebras torácicas comprendern la porción del tórax y tienen costillas adheridas a ellas.\nLas vértebras lumbares son las vértebras restantes que están por debajo del último hueso torácico y en la parte superior del sacro."
   />
 </bone-data>

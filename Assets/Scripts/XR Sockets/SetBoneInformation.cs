@@ -18,8 +18,6 @@ public class SetBoneInformation : MonoBehaviour
     {
         TextAsset textAsset = (TextAsset)Resources.Load("Bone Data");
 
-        Debug.Log(textAsset);
-
         boneData = new XmlDocument();
         boneData.PreserveWhitespace = false;
         boneData.LoadXml(textAsset.text);
@@ -55,7 +53,5 @@ public class SetBoneInformation : MonoBehaviour
         nameText.text = node.Attributes["name"].InnerText;
         scientificNameText.text = node.Attributes["scientific-name"].InnerText;
         descriptionText.text = node.Attributes["description"].InnerText.Replace("\\n", "\n");
-
-        Debug.Log(descriptionText.text);
     }
 }

@@ -8,10 +8,10 @@ public class HapticFeedback : MonoBehaviour
     public float intensity;
     public float duration;
 
-    void Start()
+    private void Start()
     {
         XRBaseInteractable interactable = GetComponent<XRBaseInteractable>();
-        interactable.selectEntered.AddListener(TriggerHaptic);   
+        interactable.selectEntered.AddListener(TriggerHaptic);
     }
 
     public void TriggerHaptic(BaseInteractionEventArgs eventArgs)

@@ -3226,6 +3226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4021307373189744467}
+  - component: {fileID: 1241084332926084930}
   m_Layer: 0
   m_Name: XR Origin Set Up (Custom)
   m_TagString: Untagged
@@ -3252,6 +3253,22 @@ Transform:
   - {fileID: 4710168204169184279}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1241084332926084930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922835718797634344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef996e201d12abc4dae0a646d5706597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetTransform: {fileID: 0}
+  player: {fileID: 5804613474036516700}
+  playerHead: {fileID: 7684249317386162145}
+  cameraOffset: {fileID: 1676736360547905904}
 --- !u!1 &1938675690382083528
 GameObject:
   m_ObjectHideFlags: 0

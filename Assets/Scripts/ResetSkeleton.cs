@@ -16,12 +16,10 @@ public class ResetSkeleton : MonoBehaviour
     private bool resetting;
 
     private float currentTime;
-    private bool finishedAnimation;
 
     private void Start()
     {
         resetting = false;
-        finishedAnimation = false;
         
         bonesTransforms = gameObject.GetComponentsInChildren<Transform>();
         startPosition = new Tuple<Vector3, Quaternion>[bonesTransforms.Length];
@@ -51,7 +49,6 @@ public class ResetSkeleton : MonoBehaviour
             {
                 resetting = false;
                 currentTime = 0.0f;
-                finishedAnimation = false;
             
                 for (int i = 0; i < bonesTransforms.Length; i++)
                 {

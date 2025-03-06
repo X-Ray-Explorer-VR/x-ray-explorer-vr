@@ -30,23 +30,17 @@ public class ShowAndHideTooltips : MonoBehaviour
         }
         // Add functions
         interactable.selectEntered.AddListener(OnSelectEnter);
-        interactable.selectExited.AddListener(OnSelectExited);
+        //interactable.selectExited.AddListener(OnSelectExited);
     }
 
     private void OnSelectEnter(SelectEnterEventArgs args)
     {
-        if (!args.interactorObject.transform.CompareTag(socketTag))
-        {
-            ToggleTooltips(true);
-        }
+        ToggleTooltips(!args.interactorObject.transform.CompareTag(socketTag));
     }
 
     private void OnSelectExited(SelectExitEventArgs args)
     {
-        if (!args.interactorObject.transform.CompareTag(socketTag))
-        {
-            ToggleTooltips(false);
-        }
+        
     }
 
     private void ToggleTooltips(bool visible)

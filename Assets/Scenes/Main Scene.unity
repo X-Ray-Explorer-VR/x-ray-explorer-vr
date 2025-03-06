@@ -3868,10 +3868,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Full Male Skeleton
       objectReference: {fileID: 0}
-    - target: {fileID: 171149350636526930, guid: b64791149e239674895f10cbcc120539, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1007403654651800223, guid: b64791149e239674895f10cbcc120539, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.002852608
@@ -4166,6 +4162,10 @@ PrefabInstance:
     - target: {fileID: 7757957146057139789, guid: cdd80f563dcd3594a943b3f53196b064, type: 3}
       propertyPath: m_Name
       value: Full Male Skeleton (Assembly)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7757957146057139789, guid: cdd80f563dcd3594a943b3f53196b064, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7929657252953795495, guid: cdd80f563dcd3594a943b3f53196b064, type: 3}
       propertyPath: m_Size.x

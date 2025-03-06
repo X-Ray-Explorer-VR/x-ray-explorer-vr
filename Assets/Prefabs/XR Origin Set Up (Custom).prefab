@@ -3268,7 +3268,6 @@ MonoBehaviour:
   resetTransform: {fileID: 0}
   player: {fileID: 5804613474036516700}
   playerHead: {fileID: 7684249317386162145}
-  cameraOffset: {fileID: 1676736360547905904}
 --- !u!1 &1938675690382083528
 GameObject:
   m_ObjectHideFlags: 0

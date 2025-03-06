@@ -36,8 +36,6 @@ public class ResetSkeleton : MonoBehaviour
         {
             float animationPercent = Mathf.Clamp(currentTime / resetTime, 0, 1.0f);
             
-            Debug.Log($"{animationPercent} - {currentTime}");
-            
             for (int i = 0; i < bonesTransforms.Length; i++)
             {
                 bonesTransforms[i].position = Vector3.Lerp(initialAnimationPosition[i].Item1, startPosition[i].Item1, animationPercent);
@@ -56,8 +54,6 @@ public class ResetSkeleton : MonoBehaviour
                     bonesTransforms[i].position = startPosition[i].Item1;
                     bonesTransforms[i].rotation = startPosition[i].Item2;
                 }
-            
-                initialAnimationPosition.Free();
             }
             
             currentTime += Time.deltaTime;

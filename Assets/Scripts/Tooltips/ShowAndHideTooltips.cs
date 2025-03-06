@@ -9,10 +9,12 @@ public class ShowAndHideTooltips : MonoBehaviour
     private string tooltipTag = "Tooltip";
     
     private XRGrabInteractable interactable;
-    private List<GameObject> tooltips = new();
+    private List<GameObject> tooltips;
 
     private void Start()
     {
+        tooltips = new();
+        
         interactable = GetComponent<XRGrabInteractable>();
         // Get all available tooltips
         for (int i = 0; i < transform.childCount; i++)

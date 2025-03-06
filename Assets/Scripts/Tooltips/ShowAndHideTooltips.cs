@@ -7,6 +7,8 @@ public class ShowAndHideTooltips : MonoBehaviour
     [Header("Properties")]
     [SerializeField]
     private string tooltipTag = "Tooltip";
+    [SerializeField]
+    private string socketTag = "Socket";
     
     private XRGrabInteractable interactable;
     private List<GameObject> tooltips;
@@ -33,12 +35,18 @@ public class ShowAndHideTooltips : MonoBehaviour
 
     private void OnSelectEnter(SelectEnterEventArgs args)
     {
-        ToggleTooltips(true);
+        if (!args.interactorObject.transform.CompareTag(socketTag))
+        {
+            ToggleTooltips(true);
+        }
     }
 
     private void OnSelectExited(SelectExitEventArgs args)
     {
-        ToggleTooltips(false);
+        if (!args.interactorObject.transform.CompareTag(socketTag))
+        {
+            ToggleTooltips(false);
+        }
     }
 
     private void ToggleTooltips(bool visible)

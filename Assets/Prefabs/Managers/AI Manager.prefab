@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2367448409547607793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4766573573878769755}
+  - component: {fileID: 5515869811402248376}
+  - component: {fileID: 1086386902477714088}
+  - component: {fileID: 7782899735473572986}
+  - component: {fileID: 8402359148063164009}
+  - component: {fileID: 7814996526317160758}
+  - component: {fileID: 6350843417661418642}
+  - component: {fileID: 930012916672909291}
+  - component: {fileID: 2799535167377965635}
+  m_Layer: 0
+  m_Name: AI Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4766573573878769755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367448409547607793}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5515869811402248376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367448409547607793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f217616079a9a74489a1ae3cd9178787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ModelPath: vosk-model-small-es-0.42.zip
+  VoiceProcessor: {fileID: 1086386902477714088}
+  MaxAlternatives: 3
+  MaxRecordLength: 5
+  AutoStart: 1
+  KeyPhrases: []
+--- !u!114 &1086386902477714088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367448409547607793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf39116cc6db44d47b2eaf534e0f6682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MicrophoneIndex: 1
+  _minimumSpeakingSampleValue: 0.2
+  _silenceTimer: 1
+  _autoDetect: 0
+--- !u!114 &7782899735473572986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367448409547607793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00507a6ac892cd488b1a1eed4a1f57a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  engine: 1
+  triggerAssistant: {fileID: -6383420102608997573, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  assistantCanvas: {fileID: 0}
+--- !u!114 &8402359148063164009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367448409547607793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6006656e804cd4d93ac54c56b149d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apiUrl: https://api.deepseek.com/chat/completions
+  apiKey: 
+  model: deepseek-chat
+  maxTokens: 160
+  systemInitialMessage: "Eres un m\xE9dico especialista en el esqueleto humano. Que
+    no sea una respuesta mayor a dos parrafos. S\xF3lo puedes contestar una pregunta
+    a la vez"
+--- !u!114 &7814996526317160758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367448409547607793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d7f727165eb5844b68f6ad1f114558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apiUrl: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+  apiKey: 
+  systemInitialMessage: "Eres un m\xE9dico especialista en el esqueleto humano. Que
+    no sea una respuesta mayor a dos p\xE1rrafos. S\xF3lo puedes contestar una pregunta
+    a la vez. No hagas preguntas."
+--- !u!114 &6350843417661418642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367448409547607793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb67938a66823644b42e1cf9b93365e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipTag: Tooltip
+  skeletonTag: Skeleton
+  specialWordsToCheck:
+  - derecha
+  - izquierda
+  - derecho
+  - izquierdo
+  - hueso
+--- !u!114 &930012916672909291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367448409547607793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee34459dc66ccdd4c9f304c45a7abc59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showingResult: 0
+  initialMessage: Presiona X para realizar una pregunta
+  listeningMessage: Escuchando...
+  questionMessage: 'Preguntaste: "$"
+
+    <b>Esperando respuesta...</b>'
+  askObject: {fileID: 0}
+  askText: {fileID: 0}
+  resultObject: {fileID: 0}
+  resultTitle: {fileID: 0}
+  resultText: {fileID: 0}
+--- !u!114 &2799535167377965635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367448409547607793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbf6b157e39e25d41a328995bcff912e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  geminiToggle: {fileID: 0}
+  deepseekToggle: {fileID: 0}

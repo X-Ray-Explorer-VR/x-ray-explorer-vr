@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bone-data>
+  <cranium
+    name="Cráneo"
+    scientific-name="cranium"
+    description="El cráneo proporciona un medio de protección al encéfalo y a órganos sensoriales especiales (vista, olfato, equilibrio y gusto).\n\nEste se compone de 8 huesos diferentes como el hueso frontal, maxilar superior, temporal izquierdo y derecho, pariental izquierdo y derecho, occipital, cigomático izquierdo y derecho, esfenoides y la mandíbula."
+  />
+  <spinal-cord
+    name="Columna vertebral"
+    scientific-name=""
+    description="La columna vertebral está compuesta por 33 huesos diferentes y dividida en varias secciones.\n\nLas vértebras cervicales forman el cuello.\nLas vértebras torácicas comprenden la porción del tórax y tienen costillas adheridas a ellas.\nLas vértebras lumbares son las vértebras restantes que están por debajo del último hueso torácico y en la parte superior del sacro."
+  />
+  <rib-cage
+    name="Caja torácica"
+    scientific-name=""
+    description="La caja torácica es una estructura ósea similar a una jaula que enmarca la cavidad torácica.\n\nLas 24 costillas envuelven los costados del torso de delante hacia atrás. Se conectan con la columna torácica en la parte posterior y con el esternón en la parte frontal."
+  />
+  <right-top
+    name="Extremidad superior derecha"
+    scientific-name=""
+    description=""
+  />
+  <left-top
+    name="Extremidad superior izquierda"
+    scientific-name=""
+    description=""
+  />
+  <right-hand
+    name="Mano derecha"
+    scientific-name=""
+    description=""
+  />
+  <left-hand
+    name="Mano izquierda"
+    scientific-name=""
+    description=""
+  />
+  <right-bottom
+    name="Extremidad inferior derecha"
+    scientific-name=""
+    description=""
+  />
+  <left-bottom
+    name="Extremidad inferior izquierda"
+    scientific-name=""
+    description=""
+  />
+  <right-foot
+    name="Pie derecho"
+    scientific-name=""
+    description=""
+  />
+  <left-foot
+    name="Pie izquierdo"
+    scientific-name=""
+    description=""
+  />
+</bone-data>

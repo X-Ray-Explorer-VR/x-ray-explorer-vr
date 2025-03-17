@@ -74,3 +74,4 @@ crashlytics-build.properties
 
 .env
 .plastic
+.cache_ggshield

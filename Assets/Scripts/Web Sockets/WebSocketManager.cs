@@ -18,11 +18,11 @@ public class WebSocketManager : MonoBehaviour
         {
             BoneCode bone = args.interactableObject.transform.GetComponent<BoneCode>();
             
-            SendWebSocketMessage($"Oculus client: Attached {bone.code}");
+            SendWebSocketMessage($"Oculus client: Set {bone.code}");
         });
         socketInteractor.selectExited.AddListener((_) =>
         {
-            SendWebSocketMessage("Oculus client: Detached");
+            SendWebSocketMessage("Oculus client: Remove");
         });
         
         // Open a new websocket client

@@ -2,57 +2,57 @@
 <bone-data>
   <cranium
     name="Cráneo"
-    scientific-name="cranium"
-    description="El cráneo proporciona un medio de protección al encéfalo y a órganos sensoriales especiales (vista, olfato, equilibrio y gusto).\n\nEste se compone de 8 huesos diferentes como el hueso frontal, maxilar superior, temporal izquierdo y derecho, pariental izquierdo y derecho, occipital, cigomático izquierdo y derecho, esfenoides y la mandíbula."
+    scientific-name="22 huesos"
+    description="El cráneo proporciona un medio de protección al encéfalo y a órganos sensoriales especiales (vista, olfato, equilibrio y gusto). Este se compone de 8 huesos diferentes como el hueso frontal, maxilar superior, temporal izquierdo y derecho, pariental izquierdo y derecho, occipital, cigomático izquierdo y derecho, esfenoides y la mandíbula."
   />
   <spinal-cord
     name="Columna vertebral"
-    scientific-name=""
+    scientific-name="33 huesos | 26 funcionales"
     description="La columna vertebral está compuesta por 33 huesos diferentes y dividida en varias secciones.\n\nLas vértebras cervicales forman el cuello.\nLas vértebras torácicas comprenden la porción del tórax y tienen costillas adheridas a ellas.\nLas vértebras lumbares son las vértebras restantes que están por debajo del último hueso torácico y en la parte superior del sacro."
   />
   <rib-cage
     name="Caja torácica"
-    scientific-name=""
+    scientific-name="25 huesos | 27 con clavícula"
     description="La caja torácica es una estructura ósea similar a una jaula que enmarca la cavidad torácica.\n\nLas 24 costillas envuelven los costados del torso de delante hacia atrás. Se conectan con la columna torácica en la parte posterior y con el esternón en la parte frontal."
   />
   <right-top
     name="Extremidad superior derecha"
-    scientific-name=""
-    description=""
+    scientific-name="3 huesos | 4 con escápula"
+    description="La extremidad superior derecha se compone de los mismos 3 huesos: el húmero, el cúbito y el radio, los cuales forman la estructura ósea del brazo y el antebrazo. Al igual que en el lado izquierdo, la clavícula y el omóplato no son parte del brazo en sí, pero son esenciales en la cintura escapular (o cintura pectoral), conectando esta extremidad con el esqueleto axial (el torso)."
   />
   <left-top
     name="Extremidad superior izquierda"
-    scientific-name=""
-    description=""
+    scientific-name="3 huesos | 4 con escápula"
+    description="La extremidad superior izquierda se compone de 3 huesos, el húmero, cúbito y radio estos huesos forman la estructura ósea del brazo y el antebrazo. La clavícula y el omóplato no forman parte del brazo en sí pero son huesos clave que forman parte de la cintura escapular (o cintura pectoral), que conecta el brazo con el esqueleto axial (el torso)."
   />
   <right-hand
     name="Mano derecha"
-    scientific-name=""
-    description=""
+    scientific-name="27 huesos"
+    description="La mano derecha cuenta con 27 huesos, organizados en los mismos grupos: carpianos (8 huesos), metacarpianos (5 huesos) y falanges (14 huesos), manteniendo la misma estructura que su contraparte izquierda."
   />
   <left-hand
     name="Mano izquierda"
-    scientific-name=""
-    description=""
+    scientific-name="27 huesos"
+    description="La mano izquierda está formada por 27 huesos, distribuidos en tres grupos: los carpianos (8 huesos en la muñeca), los metacarpianos (5 huesos en la palma) y las falanges (14 huesos en los dedos)."
   />
   <right-bottom
     name="Extremidad inferior derecha"
-    scientific-name=""
-    description=""
+    scientific-name="5 huesos"
+    description="Desde la pelvis (compuesta por el ilion, el pubis y el isquion), la extremidad inferior derecha se compone del fémur, la rótula, la tibia y el peroné."
   />
   <left-bottom
     name="Extremidad inferior izquierda"
-    scientific-name=""
-    description=""
+    scientific-name="5 huesos"
+    description="Desde la pelvis, que incluye el ilion, el pubis y el isquion, la extremidad inferior izquierda está formada por el fémur (hueso del muslo), la rótula (hueso de la rodilla), y los huesos de la pierna: la tibia y el peroné."
   />
   <right-foot
     name="Pie derecho"
-    scientific-name=""
-    description=""
+    scientific-name="26 huesos"
+    description="El pie derecho se compone de los tarsianos (7 huesos), los metatarsianos (5 huesos) y las falanges (14 huesos), manteniendo la misma estructura que su contraparte izquierda."
   />
   <left-foot
     name="Pie izquierdo"
-    scientific-name=""
-    description=""
+    scientific-name="26 huesos"
+    description="El pie izquierdo está formado por tres grupos de huesos: los tarsianos (7 huesos, incluyendo el astrágalo y el calcáneo), los metatarsianos (5 huesos que forman la parte media del pie) y las falanges (14 huesos que conforman los dedos)."
   />
 </bone-data>

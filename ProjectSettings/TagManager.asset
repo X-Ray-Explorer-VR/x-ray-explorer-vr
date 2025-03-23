@@ -8,6 +8,8 @@ TagManager:
   - Tooltip
   - Socket
   - Skeleton
+  - Audio Manager
+  - Scene Manager
   layers:
   - Default
   - TransparentFX

@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2128b5f83f9e88143b5425b4c77717c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SFXChannelName: SFX
+  UIChannelName: UI Click

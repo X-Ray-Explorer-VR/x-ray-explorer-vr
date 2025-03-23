@@ -4,19 +4,20 @@ using UnityEngine;
 public class FindAudioManager : MonoBehaviour
 {
     [Header("Properties")]
-    public string UIChannelName = "UI";
-    private GameObject audioManager;
+    public string UIChannelName = "UI Click";
+    
+    private GameObject _audioManager;
 
-    private void Start()
+    private void Awake()
     {
-        audioManager = GameObject.Find("Audio Manager");
+        _audioManager = GameObject.FindGameObjectWithTag("Audio Manager");
     }
 
     public void CallOneShotUI(AudioClip audio)
     {
-        if (audioManager)
+        if (_audioManager)
         {
-            GameObject channelObject = audioManager.gameObject.GetNamedChild(UIChannelName);
+            GameObject channelObject = _audioManager.gameObject.GetNamedChild(UIChannelName);
             AudioSource source = channelObject.GetComponent<AudioSource>();
 
             if (source)

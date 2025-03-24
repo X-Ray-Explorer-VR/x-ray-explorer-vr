@@ -3,20 +3,20 @@ using UnityEngine;
 public class FindMainCamera : MonoBehaviour
 {
 
-    private Canvas canvas;
+    private Canvas _canvas;
 
     private void Start()
     {
-        canvas = GetComponent<Canvas>();
+        _canvas = GetComponent<Canvas>();
     }
 
     public void Find()
     {
-        Camera camera = Camera.main;
+        Camera mainCamera = Camera.main;
 
-        if (camera)
+        if (mainCamera)
         {
-            canvas.worldCamera = camera;
+            _canvas.worldCamera = mainCamera;
         }
     }
 }

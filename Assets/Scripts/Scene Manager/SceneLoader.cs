@@ -6,28 +6,28 @@ public class SceneLoader : MonoBehaviour
 {
     [Header("References")]
     public GameObject loadingScreen;
-    private FindMainCamera findMainCamera;
-    private CanvasGroup canvasGroup;
+    private FindMainCamera _findMainCamera;
+    private CanvasGroup _canvasGroup;
 
     private void Start()
     {
         DontDestroyOnLoad(this);
         // Get required components
-        findMainCamera = GetComponent<FindMainCamera>();
-        canvasGroup = loadingScreen.GetComponent<CanvasGroup>();
+        _findMainCamera = GetComponent<FindMainCamera>();
+        _canvasGroup = loadingScreen.GetComponent<CanvasGroup>();
     }
 
-    public void LoadScene(string name)
+    public void LoadScene(string sceneName)
     {
-        StartCoroutine(StartLoad(name));
+        StartCoroutine(StartLoad(sceneName));
     }
 
-    IEnumerator StartLoad(string name)
+    IEnumerator StartLoad(string sceneName)
     {
         loadingScreen.SetActive(true);
         yield return StartCoroutine(FadeLoadingScreen(1, 1));
 
-        AsyncOperation operation = SceneManager.LoadSceneAsync(name);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
 
         while (!operation.isDone)
         {
@@ -35,7 +35,7 @@ public class SceneLoader : MonoBehaviour
         }
 
         // Find the main camera in scene
-        findMainCamera.Find();
+        _findMainCamera.Find();
 
         yield return StartCoroutine(FadeLoadingScreen(0, 1));
         loadingScreen.SetActive(false);
@@ -43,16 +43,16 @@ public class SceneLoader : MonoBehaviour
 
     IEnumerator FadeLoadingScreen(float targetValue, float duration)
     {
-        float startValue = canvasGroup.alpha;
+        float startValue = _canvasGroup.alpha;
         float time = 0.0f;
 
         while (time < duration)
         {
-            canvasGroup.alpha = Mathf.Lerp(startValue, targetValue, time / duration);
+            _canvasGroup.alpha = Mathf.Lerp(startValue, targetValue, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
 
-        canvasGroup.alpha = targetValue;
+        _canvasGroup.alpha = targetValue;
     }
 }

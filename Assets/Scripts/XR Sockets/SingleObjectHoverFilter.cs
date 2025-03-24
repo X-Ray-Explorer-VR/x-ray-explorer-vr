@@ -6,19 +6,19 @@ public class SingleObjectHoverFilter : MonoBehaviour, IXRHoverFilter
 {
     public bool canProcess => isActiveAndEnabled;
 
-    private XRSocketInteractor socket;
+    private XRSocketInteractor _socket;
     
     // Start is called before the first frame update
     void Start()
     {
-        socket = GetComponent<XRSocketInteractor>();
+        _socket = GetComponent<XRSocketInteractor>();
             
         // Automatically add the hover filter to the object
-        socket.hoverFilters.Add(this);
+        _socket.hoverFilters.Add(this);
     }
 
     public bool Process(IXRHoverInteractor interactor, IXRHoverInteractable interactable)
     {
-        return !socket.hasSelection;
+        return !_socket.hasSelection;
     }
 }

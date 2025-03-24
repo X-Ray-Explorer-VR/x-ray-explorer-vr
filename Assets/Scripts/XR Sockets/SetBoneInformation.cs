@@ -12,15 +12,15 @@ public class SetBoneInformation : MonoBehaviour
     public TextMeshProUGUI descriptionText;
     public XRSocketInteractor socket;
 
-    private XmlDocument boneData;
+    private XmlDocument _boneData;
 
     private void Start()
     {
         TextAsset textAsset = (TextAsset)Resources.Load("Bone Data");
 
-        boneData = new XmlDocument();
-        boneData.PreserveWhitespace = false;
-        boneData.LoadXml(textAsset.text);
+        _boneData = new XmlDocument();
+        _boneData.PreserveWhitespace = false;
+        _boneData.LoadXml(textAsset.text);
     }
 
     public void UpdateInformation()
@@ -44,7 +44,7 @@ public class SetBoneInformation : MonoBehaviour
 
     private void SetInformation(string boneCode)
     {
-        XmlNode node = boneData.DocumentElement.SelectSingleNode(boneCode);
+        XmlNode node = _boneData.DocumentElement.SelectSingleNode(boneCode);
 
         // Get data from node attributes
         nameText.text = node.Attributes["name"].InnerText;

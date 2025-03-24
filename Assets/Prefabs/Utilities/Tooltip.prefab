@@ -38,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 70, y: 50}
+  m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.05, y: 0.05}
 --- !u!223 &7351447216037831138
 Canvas:
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.8
+  m_fontSize: 14.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -247,7 +247,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1930117864946535391}
   - component: {fileID: 5261232877222783892}
-  - component: {fileID: 2054811037360040558}
   - component: {fileID: 984331032654120520}
   m_Layer: 0
   m_Name: Point B
@@ -271,7 +270,7 @@ Transform:
   m_Children:
   - {fileID: 4521144649366076157}
   m_Father: {fileID: 6437734052796204415}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -64.208, y: 0, z: 0}
 --- !u!114 &5261232877222783892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,30 +287,17 @@ MonoBehaviour:
   m_TargetOffset: {x: 0, y: 0, z: 0.5}
   m_FollowInLocalSpace: 0
   m_ApplyTargetInLocalSpace: 0
-  m_MovementSpeed: 3
+  m_MovementSpeed: 5
   m_MovementSpeedVariancePercentage: 0.25
   m_SnapOnEnable: 1
   m_PositionFollowMode: 1
   m_MinDistanceAllowed: 0.01
-  m_MaxDistanceAllowed: 0.5
+  m_MaxDistanceAllowed: 0.1
   m_TimeUntilThresholdReachesMaxDistance: 0.5
   m_RotationFollowMode: 0
   m_MinAngleAllowed: 0.1
   m_MaxAngleAllowed: 5
   m_TimeUntilThresholdReachesMaxAngle: 3
---- !u!114 &2054811037360040558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3674940107202925799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecd70a8686ccbdd4caf1be8c402f0bba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  follow: {fileID: 0}
 --- !u!114 &984331032654120520
 MonoBehaviour:
   m_ObjectHideFlags: 0

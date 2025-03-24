@@ -9,13 +9,13 @@ public class CameraGazeFilter : MonoBehaviour, IXRHoverFilter
     [SerializeField]
     private string gazeInteractorName = "Hand Gaze Interactor";
 
-    private XRSimpleInteractable simpleInteractable;
+    private XRSimpleInteractable _simpleInteractable;
 
     private void Start()
     {
-        simpleInteractable = GetComponent<XRSimpleInteractable>();
+        _simpleInteractable = GetComponent<XRSimpleInteractable>();
         // Add filters
-        simpleInteractable.hoverFilters.Add(this);
+        _simpleInteractable.hoverFilters.Add(this);
     }
 
     public bool Process(IXRHoverInteractor interactor, IXRHoverInteractable interactable)

@@ -9,19 +9,19 @@ public class ToggleAIEngine : MonoBehaviour
     [SerializeField]
     private Toggle deepseekToggle;
 
-    private CallAssistant assistant;
+    private CallAssistant _assistant;
     
     private void Start()
     {
-        assistant = GetComponent<CallAssistant>();
+        _assistant = GetComponent<CallAssistant>();
         
         geminiToggle.onValueChanged.AddListener(toggle =>
         {
-            if (toggle) assistant.ChangeAIEngine(AIEngine.GeminiFlash);
+            if (toggle) _assistant.ChangeAIEngine(AIEngine.GeminiFlash);
         });
         deepseekToggle.onValueChanged.AddListener(toggle =>
         {
-            if (toggle) assistant.ChangeAIEngine(AIEngine.Deepseek);
+            if (toggle) _assistant.ChangeAIEngine(AIEngine.Deepseek);
         });
     }
 

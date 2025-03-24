@@ -3,12 +3,12 @@ using UnityEngine.XR.Interaction.Toolkit.UI;
 
 public class SetDefaultLazyFollowOffset : MonoBehaviour
 {
-    private LazyFollow follow;
+    private LazyFollow _follow;
 
     private void Start()
     {
-        follow = GetComponent<LazyFollow>();
+        _follow = GetComponent<LazyFollow>();
         // Update target offset
-        follow.targetOffset = transform.localPosition;
+        _follow.targetOffset = transform.localPosition;
     }
 }

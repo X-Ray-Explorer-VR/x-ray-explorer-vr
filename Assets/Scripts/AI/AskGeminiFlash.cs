@@ -18,11 +18,11 @@ public class AskGeminiFlash : MonoBehaviour
     [TextArea]
     private string systemInitialMessage = "Eres un médico especialista en el esqueleto humano. Que no sea una respuesta mayor a dos párrafos. Sólo puedes contestar una pregunta a la vez. No hagas preguntas.";
 
-    private SetAssistant setAssistant;
+    private SetAssistant _setAssistant;
 
     private void Start()
     {
-        setAssistant = GetComponent<SetAssistant>();
+        _setAssistant = GetComponent<SetAssistant>();
     }
     
     [ContextMenu("Test API")]
@@ -79,7 +79,7 @@ public class AskGeminiFlash : MonoBehaviour
             string responseText = response.candidates[0].content.parts[0].text;
             
             // Update GUI
-            setAssistant.ShowResponse(questionText, responseText);
+            _setAssistant.ShowResponse(questionText, responseText);
         }
         
         Debug.Log("Message ended");

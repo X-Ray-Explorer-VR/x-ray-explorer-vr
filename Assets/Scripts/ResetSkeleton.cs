@@ -8,68 +8,67 @@ public class ResetSkeleton : MonoBehaviour
     [SerializeField]
     private float resetTime = 1.0f;
     
-    private Transform[] bonesTransforms;
-    private Tuple<Vector3, Quaternion>[] startPosition;
-    private Tuple<Vector3, Quaternion>[] initialAnimationPosition;
+    private Transform[] _bonesTransform;
+    private Tuple<Vector3, Quaternion>[] _startPositions;
+    private Tuple<Vector3, Quaternion>[] _initialAnimationsPosition;
     
-    private bool resetting;
-
-    private float currentTime;
+    private bool _resetting;
+    private float _currentTime;
 
     private void Start()
     {
-        resetting = false;
+        _resetting = false;
         
-        bonesTransforms = gameObject.GetComponentsInChildren<Transform>();
-        startPosition = new Tuple<Vector3, Quaternion>[bonesTransforms.Length];
+        _bonesTransform = gameObject.GetComponentsInChildren<Transform>();
+        _startPositions = new Tuple<Vector3, Quaternion>[_bonesTransform.Length];
 
-        for (int i = 0; i < bonesTransforms.Length; i++)
+        for (int i = 0; i < _bonesTransform.Length; i++)
         {
-            startPosition[i] = new Tuple<Vector3, Quaternion>(bonesTransforms[i].position, bonesTransforms[i].rotation);
+            _startPositions[i] = new Tuple<Vector3, Quaternion>(_bonesTransform[i].position, _bonesTransform[i].rotation);
         }
     }
 
     private void FixedUpdate()
     {
-        if (resetting)
+        if (_resetting)
         {
-            float animationPercent = Mathf.Clamp(currentTime / resetTime, 0, 1.0f);
+            float animationPercent = Mathf.Clamp(_currentTime / resetTime, 0, 1.0f);
             
-            for (int i = 0; i < bonesTransforms.Length; i++)
+            for (int i = 0; i < _bonesTransform.Length; i++)
             {
-                bonesTransforms[i].position = Vector3.Lerp(initialAnimationPosition[i].Item1, startPosition[i].Item1, animationPercent);
-                bonesTransforms[i].rotation =
-                    Quaternion.Lerp(initialAnimationPosition[i].Item2, startPosition[i].Item2, animationPercent);
+                _bonesTransform[i].position = Vector3.Lerp(_initialAnimationsPosition[i].Item1, _startPositions[i].Item1, animationPercent);
+                _bonesTransform[i].rotation =
+                    Quaternion.Lerp(_initialAnimationsPosition[i].Item2, _startPositions[i].Item2, animationPercent);
             }
 
             if (animationPercent >= 1.0f)
             {
-                resetting = false;
-                currentTime = 0.0f;
+                _resetting = false;
+                _currentTime = 0.0f;
             
-                for (int i = 0; i < bonesTransforms.Length; i++)
+                for (int i = 0; i < _bonesTransform.Length; i++)
                 {
 
-                    bonesTransforms[i].position = startPosition[i].Item1;
-                    bonesTransforms[i].rotation = startPosition[i].Item2;
+                    _bonesTransform[i].position = _startPositions[i].Item1;
+                    _bonesTransform[i].rotation = _startPositions[i].Item2;
                 }
             }
             
-            currentTime += Time.deltaTime;
+            _currentTime += Time.deltaTime;
         }
     }
 
     [ContextMenu("Reset bones position")]
     public void ResetPositions()
     {
-        initialAnimationPosition = new Tuple<Vector3, Quaternion>[bonesTransforms.Length];
+        _initialAnimationsPosition = new Tuple<Vector3, Quaternion>[_bonesTransform.Length];
         
-        for (int i = 0; i < bonesTransforms.Length; i++)
+        for (int i = 0; i < _bonesTransform.Length; i++)
         {
-            initialAnimationPosition[i] =
-                new Tuple<Vector3, Quaternion>(bonesTransforms[i].position, bonesTransforms[i].rotation);
+            _initialAnimationsPosition[i] =
+                new Tuple<Vector3, Quaternion>(_bonesTransform[i].position, _bonesTransform[i].rotation);
         }
         
-        resetting = true;
+        _resetting = true;
     }
 }

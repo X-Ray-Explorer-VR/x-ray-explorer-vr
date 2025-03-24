@@ -12,23 +12,23 @@ public class CallAssistant : MonoBehaviour
     [SerializeField]
     private CanvasGroup assistantCanvas;
 
-    private VoskSpeechToText voskSpeechToText;
-    private AskDeepsek askDeepseek;
-    private AskGeminiFlash askGeminiFlash;
-    private SetAssistant setAssistant;
-    private bool searchNextPhrase;
-    private bool ready;
+    private VoskSpeechToText _voskSpeechToText;
+    private AskDeepsek _askDeepseek;
+    private AskGeminiFlash _askGeminiFlash;
+    private SetAssistant _setAssistant;
+    private bool _searchNextPhrase;
+    private bool _ready;
 
     private void Start()
     {
-        searchNextPhrase = false;
-        ready = true;
+        _searchNextPhrase = false;
+        _ready = true;
         
-        voskSpeechToText = GetComponent<VoskSpeechToText>();
-        askDeepseek = GetComponent<AskDeepsek>();
-        askGeminiFlash = GetComponent<AskGeminiFlash>();
-        setAssistant = GetComponent<SetAssistant>();
-        voskSpeechToText.OnTranscriptionResult += OnTranscriptionResult;
+        _voskSpeechToText = GetComponent<VoskSpeechToText>();
+        _askDeepseek = GetComponent<AskDeepsek>();
+        _askGeminiFlash = GetComponent<AskGeminiFlash>();
+        _setAssistant = GetComponent<SetAssistant>();
+        _voskSpeechToText.OnTranscriptionResult += OnTranscriptionResult;
         
         triggerAssistant.action.started += OnButtonPressed;
     }
@@ -36,76 +36,75 @@ public class CallAssistant : MonoBehaviour
     [ContextMenu("Button Pressed")]
     private void Test()
     {
-        if (ready)
+        if (_ready)
         {
             // Update visuals
-            setAssistant.ShowListening();
+            _setAssistant.ShowListening();
                 
-            searchNextPhrase = true;
-            ready = false;
+            _searchNextPhrase = true;
+            _ready = false;
         }
-        else if (setAssistant.showingResult)
+        else if (_setAssistant.showingResult)
         {
-            setAssistant.ResetUI();
-            ready = true;
+            _setAssistant.ResetUI();
+            _ready = true;
         }
     }
     
     private void OnButtonPressed(InputAction.CallbackContext context)
     {
-        if (assistantCanvas.alpha > 0.5 && ready)
+        if (assistantCanvas.alpha > 0.5 && _ready)
         {
             // Update visuals
-            setAssistant.ShowListening();
+            _setAssistant.ShowListening();
                 
-            searchNextPhrase = true;
-            ready = false;
+            _searchNextPhrase = true;
+            _ready = false;
         }
-        else if (setAssistant.showingResult)
+        else if (_setAssistant.showingResult)
         {
-            setAssistant.ResetUI();
-            ready = true;
+            _setAssistant.ResetUI();
+            _ready = true;
         }
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
     private void OnTranscriptionResult(string text)
     {
-        if (searchNextPhrase)
+        if (!_searchNextPhrase) return;
+        
+        TranscriptionResult result = JsonUtility.FromJson<TranscriptionResult>(text);
+        string bestAlternativeText = result.alternatives[0].text.Trim();
+
+        if (!string.IsNullOrWhiteSpace(bestAlternativeText))
         {
-            TranscriptionResult result = JsonUtility.FromJson<TranscriptionResult>(text);
-            string bestAlternativeText = result.alternatives[0].text.Trim();
+            Debug.Log(bestAlternativeText);
+            // Update UI
+            _setAssistant.ShowWaiting(bestAlternativeText);
 
-            if (!string.IsNullOrWhiteSpace(bestAlternativeText))
+            switch (engine)
             {
-                Debug.Log(bestAlternativeText);
-                // Update UI
-                setAssistant.ShowWaiting(bestAlternativeText);
-
-                switch (engine)
-                {
-                    default:
-                    case AIEngine.Deepseek:
-                        Debug.Log("Asking using Deepseek AI");
-                        askDeepseek.AskAI(bestAlternativeText);
-                        break;
-                    case AIEngine.GeminiFlash:
-                        Debug.Log("Asking using Gemini Flash AI");
-                        askGeminiFlash.AskAI(bestAlternativeText);
-                        break;
-                }
+                default:
+                case AIEngine.Deepseek:
+                    Debug.Log("Asking using Deepseek AI");
+                    _askDeepseek.AskAI(bestAlternativeText);
+                    break;
+                case AIEngine.GeminiFlash:
+                    Debug.Log("Asking using Gemini Flash AI");
+                    _askGeminiFlash.AskAI(bestAlternativeText);
+                    break;
             }
-            else
-            {
-                Debug.Log("Empty Vosk transcription");
-                
-                setAssistant.ResetUI();
-                
-                ready = true;
-            }
-            
-            searchNextPhrase = false;
         }
+        else
+        {
+            Debug.Log("Empty Vosk transcription");
+                
+            _setAssistant.ResetUI();
+                
+            _ready = true;
+        }
+            
+        _searchNextPhrase = false;
     }
 
     public void ChangeAIEngine(AIEngine newEngine)

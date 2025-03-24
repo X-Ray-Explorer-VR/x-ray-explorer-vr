@@ -6,6 +6,7 @@ public class HapticFeedback : MonoBehaviour
     [Header("Haptic properties")]
     [Range(0, 1)]
     public float intensity;
+    [Range(0, 1)]
     public float duration;
 
     private void Start()

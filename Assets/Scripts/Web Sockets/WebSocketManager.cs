@@ -9,7 +9,7 @@ public class WebSocketManager : MonoBehaviour
     [Header("References")] [SerializeField]
     private XRSocketInteractor socketInteractor;
     
-    private WebSocket websocket;
+    private WebSocket _websocket;
 
     private async void Start()
     {
@@ -26,33 +26,33 @@ public class WebSocketManager : MonoBehaviour
         });
         
         // Open a new websocket client
-        websocket = new WebSocket("ws://localhost:8080");
+        _websocket = new WebSocket("ws://localhost:8080");
 
-        websocket.OnOpen += () =>
+        _websocket.OnOpen += () =>
         {
             Debug.Log("Native WebSockets: Connected");
             // Set initial message
             SendWebSocketMessage("Oculus client: Connected");
         };
 
-        websocket.OnError += (error) =>
+        _websocket.OnError += (error) =>
         {
             Debug.LogWarning("Native WebSockets: " + error);
         };
 
-        websocket.OnClose += (_) =>
+        _websocket.OnClose += (_) =>
         {
             Debug.Log("Native WebSockets: Disconnected");
         };
 
         // Wait for messages
-        await websocket.Connect();
+        await _websocket.Connect();
     }
 
     private void Update()
     {
         #if !UNITY_WEBGL || UNITY_EDITOR
-            websocket.DispatchMessageQueue();
+            _websocket.DispatchMessageQueue();
         #endif
     }
 
@@ -61,7 +61,7 @@ public class WebSocketManager : MonoBehaviour
         try
         {
             // Close the web socket connection when exiting the app
-            await websocket.Close();
+            await _websocket.Close();
         }
         catch (Exception e)
         {
@@ -73,9 +73,9 @@ public class WebSocketManager : MonoBehaviour
     {
         try
         {
-            if (websocket.State == WebSocketState.Open)
+            if (_websocket.State == WebSocketState.Open)
             {
-                await websocket.SendText(message);
+                await _websocket.SendText(message);
             }
         }
         catch (Exception e)

@@ -10,26 +10,26 @@ public class ToggleTooltips : MonoBehaviour
     [SerializeField]
     private string socketTag = "Socket";
     
-    private XRGrabInteractable interactable;
-    private List<GameObject> tooltips;
+    private XRGrabInteractable _interactable;
+    private List<GameObject> _tooltips;
 
     private void Start()
     {
-        tooltips = new();
+        _tooltips = new();
         
-        interactable = GetComponent<XRGrabInteractable>();
+        _interactable = GetComponent<XRGrabInteractable>();
         // Get all available tooltips
-        for (int i = 0; i < transform.childCount; i++)
+        for (int i = 0; i < transform.parent.childCount; i++)
         {
-            GameObject child = transform.GetChild(i).gameObject;
+            GameObject child = transform.parent.GetChild(i).gameObject;
             
             if (child.gameObject.CompareTag(tooltipTag))
             {
-                tooltips.Add(child);
+                _tooltips.Add(child);
             }
         }
         // Add functions
-        interactable.selectEntered.AddListener(OnSelectEnter);
+        _interactable.selectEntered.AddListener(OnSelectEnter);
     }
 
     private void OnSelectEnter(SelectEnterEventArgs args)
@@ -39,7 +39,7 @@ public class ToggleTooltips : MonoBehaviour
 
     private void Toggle(bool visible)
     {
-        foreach (var item in tooltips)
+        foreach (var item in _tooltips)
         {
             SetAsRelevant setAsRelevant = item.GetComponent<SetAsRelevant>();
 

@@ -68,6 +68,16 @@ public class CallAssistant : MonoBehaviour
         }
     }
 
+    public void SetGettingBoneInfo(string boneName)
+    {
+        if (string.IsNullOrEmpty(boneName)) return;
+        
+        // Update UI
+        _setAssistant.ShowGettingBoneInfo(boneName);
+        
+        SendToAI(boneName);
+    }
+
     // ReSharper disable Unity.PerformanceAnalysis
     private void OnTranscriptionResult(string text)
     {
@@ -81,19 +91,8 @@ public class CallAssistant : MonoBehaviour
             Debug.Log(bestAlternativeText);
             // Update UI
             _setAssistant.ShowWaiting(bestAlternativeText);
-
-            switch (engine)
-            {
-                default:
-                case AIEngine.Deepseek:
-                    Debug.Log("Asking using Deepseek AI");
-                    _askDeepseek.AskAI(bestAlternativeText);
-                    break;
-                case AIEngine.GeminiFlash:
-                    Debug.Log("Asking using Gemini Flash AI");
-                    _askGeminiFlash.AskAI(bestAlternativeText);
-                    break;
-            }
+            
+            SendToAI(bestAlternativeText);
         }
         else
         {
@@ -105,6 +104,22 @@ public class CallAssistant : MonoBehaviour
         }
             
         _searchNextPhrase = false;
+    }
+
+    private void SendToAI(string text)
+    {
+        switch (engine)
+        {
+            default:
+            case AIEngine.Deepseek:
+                Debug.Log("Asking using Deepseek AI");
+                _askDeepseek.AskAI(text);
+                break;
+            case AIEngine.GeminiFlash:
+                Debug.Log("Asking using Gemini Flash AI");
+                _askGeminiFlash.AskAI(text);
+                break;
+        }
     }
 
     public void ChangeAIEngine(AIEngine newEngine)

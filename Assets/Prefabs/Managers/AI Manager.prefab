@@ -157,11 +157,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showingResult: 0
-  initialMessage: Presiona X para realizar una pregunta
+  initialMessage: "Presiona X para realizar una pregunta o seleccione un hueso para
+    m\xE1s informaci\xF3n"
   listeningMessage: Escuchando...
   questionMessage: 'Preguntaste: "$"
 
     <b>Esperando respuesta...</b>'
+  boneInformationMessage: "Buscando informaci\xF3n de $..."
   askObject: {fileID: 0}
   askText: {fileID: 0}
   resultObject: {fileID: 0}

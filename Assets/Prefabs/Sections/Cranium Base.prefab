@@ -2681,6 +2681,10 @@ PrefabInstance:
       propertyPath: pointA
       value: 
       objectReference: {fileID: 7158814097225860231}
+    - target: {fileID: 1196473127379358751, guid: d1a3fceb7f67e5044bbc628af8a2178d, type: 3}
+      propertyPath: m_Name
+      value: Tooltip Canvas
+      objectReference: {fileID: 0}
     - target: {fileID: 1930117864946535391, guid: d1a3fceb7f67e5044bbc628af8a2178d, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.4117123
@@ -2732,14 +2736,6 @@ PrefabInstance:
     - target: {fileID: 4118427951232735981, guid: d1a3fceb7f67e5044bbc628af8a2178d, type: 3}
       propertyPath: m_Positions.Array.data[1].z
       value: 1.37556
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521144649366076157, guid: d1a3fceb7f67e5044bbc628af8a2178d, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4521144649366076157, guid: d1a3fceb7f67e5044bbc628af8a2178d, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5261232877222783892, guid: d1a3fceb7f67e5044bbc628af8a2178d, type: 3}
       propertyPath: m_Target

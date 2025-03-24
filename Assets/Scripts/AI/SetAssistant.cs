@@ -13,6 +13,8 @@ public class SetAssistant : MonoBehaviour
     private string listeningMessage = "Escuchando...";
     [SerializeField]
     private string questionMessage = "Preguntaste: \"$\"\n\n<b>Esperando respuesta...</b>";
+    [SerializeField]
+    private string boneInformationMessage = "Buscando información de $...";
     [Header("References")]
     [SerializeField]
     private GameObject askObject;
@@ -25,12 +27,12 @@ public class SetAssistant : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI resultText;
     
-    private ToggleTextRelatedTooltips relatedTooltips;
+    private ToggleTextRelatedTooltips _relatedTooltips;
     
     private void Start()
     {
         showingResult = false;
-        relatedTooltips = GetComponent<ToggleTextRelatedTooltips>();
+        _relatedTooltips = GetComponent<ToggleTextRelatedTooltips>();
     }
     
     public void ShowResponse(string questionText, string responseText)
@@ -47,7 +49,7 @@ public class SetAssistant : MonoBehaviour
         resultText.text = responseText;
         resultObject.SetActive(true);
         // Show related tooltips
-        relatedTooltips.ShowRelatedTooltips(responseText);
+        _relatedTooltips.ShowRelatedTooltips(responseText);
 
         showingResult = true;
     }
@@ -62,6 +64,11 @@ public class SetAssistant : MonoBehaviour
         askText.text = questionMessage.Replace("$", question);
     }
 
+    public void ShowGettingBoneInfo(string boneName)
+    {
+        askText.text = boneInformationMessage.Replace("$", boneName);
+    }
+
     public void ResetUI()
     {
         askText.text = initialMessage;
@@ -69,7 +76,7 @@ public class SetAssistant : MonoBehaviour
         
         resultObject.SetActive(false);
         // Hide related tooltips
-        relatedTooltips.HideAllTooltips();
+        _relatedTooltips.HideAllTooltips();
 
         showingResult = false;
     }

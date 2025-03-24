@@ -363,7 +363,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Presiona X para realizar una pregunta
+  m_text: "Presiona X para realizar una pregunta o seleccione un hueso para m\xE1s
+    informaci\xF3n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: abf84b0e2eedc754bb45d16486063d84, type: 2}
   m_sharedMaterial: {fileID: -7210715348072653523, guid: abf84b0e2eedc754bb45d16486063d84, type: 2}
@@ -390,7 +391,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1.85
+  m_fontSize: 1.4
   m_fontSizeBase: 2
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7078,6 +7079,10 @@ PrefabInstance:
       propertyPath: assistantCanvas
       value: 
       objectReference: {fileID: 1331879248}
+    - target: {fileID: 7814996526317160758, guid: 6cb42186f9d283d4288c9b11d55f5fa6, type: 3}
+      propertyPath: apiKey
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7133,6 +7138,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1007403654651800223, guid: b64791149e239674895f10cbcc120539, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6607306946065759478, guid: b64791149e239674895f10cbcc120539, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8016943626456901423}
   - component: {fileID: 3762146712103154941}
   - component: {fileID: 89108837331804890}
+  - component: {fileID: 5022860017010860105}
   - component: {fileID: 8639327810981461965}
   m_Layer: 0
   m_Name: Original Position Socket
@@ -117,6 +118,18 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+--- !u!114 &5022860017010860105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81213092135504583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d9fa4f7bb3b6543a7455bc6f627743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8639327810981461965
 MonoBehaviour:
   m_ObjectHideFlags: 0

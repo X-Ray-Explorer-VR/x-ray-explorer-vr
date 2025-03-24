@@ -8,7 +8,7 @@ public class FindAudioManager : MonoBehaviour
     
     private GameObject _audioManager;
 
-    private void Awake()
+    private void Start()
     {
         _audioManager = GameObject.FindGameObjectWithTag("Audio Manager");
     }

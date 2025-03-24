@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class SetAsRelevant : MonoBehaviour
 {
@@ -16,6 +18,13 @@ public class SetAsRelevant : MonoBehaviour
     private Image borderImage;
     [SerializeField]
     private LineRenderer line;
+
+    private XRGrabInteractable _xrGrabInteractable;
+
+    private void Start()
+    {
+        _xrGrabInteractable = transform.parent.GetComponentInChildren<XRGrabInteractable>();
+    }
 
     public void SetRelevant(bool value)
     {
@@ -36,6 +45,7 @@ public class SetAsRelevant : MonoBehaviour
             isRelevant = false;
             
             gameObject.SetActive(false);
+            
         }
     }
 }

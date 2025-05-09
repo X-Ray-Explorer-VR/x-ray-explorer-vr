@@ -25,3 +25,5 @@ The user can interact directly with the human skeleton, taking in apart and scan
 * Voice recognition with Vosk to ask questions
 * Uses Gemini Flash and Deepseek to respond the user questions
 * Connects to a spectator web page that shows more useful information
+
+### To get the latest code, visit the [alternative repository here](https://gitlab.com/AlexAzumi/x-ray-explorer-vr)
